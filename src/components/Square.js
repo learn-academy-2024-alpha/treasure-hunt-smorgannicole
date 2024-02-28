@@ -1,9 +1,9 @@
 import React from "react"
 
-const Square = () => {
+const Square = ({ qMark }) => {
   return (
     <>
-      <div className="square"></div>
+      <div className="square">{qMark}</div>
     </>
   )
 }

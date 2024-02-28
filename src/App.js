@@ -20,8 +20,8 @@ const App = () => {
       <h1>Treasure Hunt Game</h1>
       <div className="board-wrapper">
         <div className="board">
-          {board.map((square, index) => {
-            return <Square />
+          {board.map((qMark, index) => {
+            return <Square qMark={qMark} />
           })}
         </div>
       </div>
