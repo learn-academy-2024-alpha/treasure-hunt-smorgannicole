@@ -34,6 +34,10 @@ const App = () => {
     if (index === winningIndex) {
       newBoard[index] = "💰"
       setBoard(newBoard)
+      setTimeout(() => {
+        alert("You Win")
+        handleRestart()
+      }, "500")
     } else {
       newBoard[index] = "💣"
       setBoard(newBoard)
@@ -60,6 +64,15 @@ const App = () => {
     getWinningIndex()
     setCounter(restartCounter)
   }
+
+  useEffect(() => {
+    if (counter === 0) {
+      setTimeout(() => {
+        alert("Game Over");
+      handleRestart()
+      }, "500")
+    }
+  }, [counter]);
 
   return (
     <>
