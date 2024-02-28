@@ -15,13 +15,17 @@ const App = () => {
     "?"
   ])
 
+  const handleGamePlay = (index) => {
+    alert(index)
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
       <div className="board-wrapper">
         <div className="board">
           {board.map((qMark, index) => {
-            return <Square qMark={qMark} />
+            return <Square qMark={qMark} index={index} key={index} handleGamePlay={handleGamePlay} />
           })}
         </div>
       </div>

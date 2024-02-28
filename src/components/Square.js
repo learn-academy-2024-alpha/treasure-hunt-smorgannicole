@@ -1,9 +1,12 @@
 import React from "react"
 
-const Square = ({ qMark }) => {
+const Square = ({ qMark, index, handleGamePlay }) => {
+  const handleClick = () => {
+    handleGamePlay(index)
+  }
   return (
     <>
-      <div className="square">{qMark}</div>
+      <div className="square" onClick={handleClick}>{qMark}</div>
     </>
   )
 }
