@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./App.css"
 import Square from './components/Square'
+import RestartBtn from "./components/RestartBtn"
 
 const App = () => {
   const [board, setBoard] = useState([
@@ -36,6 +37,23 @@ const App = () => {
     }
   }
 
+  const handleRestart = () => {
+    const cleanBoard = [
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ]
+
+    setBoard(cleanBoard)
+    getWinningIndex()
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -44,7 +62,9 @@ const App = () => {
           {board.map((qMark, index) => {
             return <Square qMark={qMark} index={index} key={index} handleGamePlay={handleGamePlay} />
           })}
+          <RestartBtn handleRestart={handleRestart} />
         </div>
+        
       </div>
     </>
   )
