@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./App.css"
 import Square from './components/Square'
 
@@ -15,10 +15,25 @@ const App = () => {
     "?"
   ])
 
+  const [winningIndex, setWinningIndex] = useState(0)
+  useEffect(() => {
+    getWinningIndex()
+  }, [])
+
+  const getWinningIndex = () => {
+    const randIndex = Math.floor(Math.random() * board.length)
+    setWinningIndex(randIndex)
+  }
+
   const handleGamePlay = (index) => {
     const newBoard = [...board]
-    newBoard[index] = "🌴"
-    setBoard(newBoard)
+    if (index === winningIndex) {
+      newBoard[index] = "💰"
+      setBoard(newBoard)
+    } else {
+      newBoard[index] = "💣"
+      setBoard(newBoard)
+    }
   }
 
   return (
