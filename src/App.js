@@ -16,7 +16,9 @@ const App = () => {
   ])
 
   const handleGamePlay = (index) => {
-    alert(index)
+    const newBoard = [...board]
+    newBoard[index] = "🌴"
+    setBoard(newBoard)
   }
 
   return (
