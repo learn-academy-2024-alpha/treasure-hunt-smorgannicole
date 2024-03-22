@@ -1,22 +1,164 @@
-h1 {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Griffy&family=Ojuju:wght@200..800&display=swap');
+
+html {
+  overflow: hidden;
+  height: 100%;
 }
 
-.square {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
-  font-size: 150px;
-  text-align: center;
-}
-
-.board {
+.page-wrapper {
+  font-family: "Ojuju", sans-serif;
   display: flex;
-  flex-wrap: wrap;
-  width: 610px;
+  flex-direction: column;
+  min-height: 100dvh;
+  position: relative;
+  background-image: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 100%),
+    repeating-linear-gradient(
+      90deg,
+      #8bc34a,
+      #8bc34a 5px,
+      #74a02e 5px,
+      #74a02e 10px
+    );
 }
 
-.board-wrapper {
-  display: flex;
-  justify-content: center;
+.title {
+  position: absolute;
+  top: 27%;
+  left: 30%;
+  color: #1818D0;
+  font-size: 40px;
 }
+
+.counter {
+  position: absolute;
+  top: 38%;
+  left: 39%;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* #FA9018 */
+
+.flower {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  max-height: 20%;
+  cursor: pointer;
+}
+
+.shroom {
+  max-height: 100px;
+  cursor: pointer;
+}
+
+button {
+  font-family: "Madimi One", sans-serif;
+}
+
+.notebook {
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 20px;
+  position: absolute;
+  bottom: 3%;
+  right: 20%;
+  border-radius: 5px;
+  height: 35vh;
+  width: 13vw;
+  padding: 10px;
+  background-color: #fff;
+  overflow: auto; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  img {
+    max-height: 20%;
+  }
+}
+
+.basket {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  max-height: 30%;
+}
+
+.basket-mushroom-1, .basket-mushroom-2, .basket-mushroom-3 {
+  position: absolute;
+  bottom: 22%;
+  right: 5%;
+  max-height: 100px;
+}
+
+.basket-mushroom-4, .basket-mushroom-5, .basket-mushroom-6 {
+  position: absolute;
+  bottom: 22%;
+  right: 10%;
+  max-height: 100px;
+}
+
+.basket-mushroom-7, .basket-mushroom-8, .basket-mushroom-9 {
+  position: absolute;
+  bottom: 22%;
+  right: 15%;
+  max-height: 100px;
+}
+
+
+/* App.css */
+
+.mushroom1 {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+
+.mushroom2 {
+  position: absolute;
+  top: 29%;
+  left: 10%;
+}
+
+.mushroom3 {
+  position: absolute;
+  top: 5%;
+  right: 45%;
+}
+
+.mushroom4 {
+  position: absolute;
+  bottom: 80%;
+  right: 20%;
+}
+
+.mushroom5 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+}
+
+.mushroom6 {
+  position: absolute;
+  top: 13%;
+  left: 40%;
+}
+
+.mushroom7 {
+  position: absolute;
+  bottom: 4%;
+  left: 5%;
+}
+
+.mushroom8 {
+  position: absolute;
+  bottom: 36%;
+  left: 22%;
+}
+
+.mushroom9 {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+}
+
+

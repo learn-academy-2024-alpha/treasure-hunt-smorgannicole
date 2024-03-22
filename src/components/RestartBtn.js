@@ -1,12 +1,10 @@
 import React from 'react'
+import flower from './images/flower-restart-2.png'
 
 const RestartBtn = ({ handleRestart }) => {
-    const handleClick = () => {
-        handleRestart()
-    }
   return (
     <>
-        <button onClick={handleClick}>Play Again</button>
+      <img className='flower' onClick={() => handleRestart()} src={flower} alt="restart flower" />
     </>
   )
 }
